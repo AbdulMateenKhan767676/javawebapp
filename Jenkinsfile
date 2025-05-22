@@ -18,7 +18,7 @@ pipeline {
         }
         stage('artifact upload'){
         steps{
-            nexusArtifactUploader artifacts: [[artifactId: 'SimpleWebApplication', classifier: '', file: 'target/SimpleWebApplication-9.1.14.war', type: '.war']], credentialsId: 'Nexus', groupId: 'com.maven', nexusUrl: '15.206.211.8:8080', nexusVersion: 'nexus3', protocol: 'http', repository: 'project1', version: '9.1.14'
+            nexusArtifactUploader artifacts: [[artifactId: 'SimpleWebApplication', classifier: '', file: 'target/SimpleWebApplication-9.1.14.war', type: 'war']], credentialsId: 'Nexus', groupId: 'com.maven', nexusUrl: '15.206.211.8:8080', nexusVersion: 'nexus3', protocol: 'http', repository: 'project1', version: '9.1.14'
             }
         }
     }
